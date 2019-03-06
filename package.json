@@ -10,8 +10,9 @@
     "browserify": "^16.2.3"
   },
   "scripts": {
-    "build": "cp -r ./css ./js ./img ./*.html ./public",
-    "deploy": "firebase deploy --only hosting"
+    "build": "cp -r ./css ./js ./img ./*.html ./public && npm run checksum",
+    "deploy": "firebase deploy --only hosting",
+    "checksum": "shasum ./public > checksum.tmp"
   },
   "repository": {
     "type": "git",
