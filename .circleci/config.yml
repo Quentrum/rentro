@@ -23,7 +23,6 @@ jobs:
           key: npm-{{ .Branch }}-{{ checksum "checksum.tmp" }}
           paths:
             - ~/workspace/node_modules
-            - ~/workspace/dist
           force: yes
 
   deploy:
@@ -32,6 +31,9 @@ jobs:
       - image: circleci/node:9.4.0
     steps:
       - checkout
+      - restore_cache:
+          keys:
+            - npm-{{ .Branch }}-{{ checksum "checksum.tmp" }}
       - run:
           name: Install Dependency
           command: npm install
