@@ -576,13 +576,28 @@ a:visited, a:focus{
 
 
 #why-rentro-left-p{
-  margin-left: 60px; 
-  margin-top: 30px; 
-  width: 40%;
-  font-size: 28px;  
-  line-height: 35px; 
+    margin-left: 60px;
+    margin-top: 30px;
+    width: 55%;
+    font-size: 24px;
+    line-height: 26px;
 }
 
 .become-span{
   display: inline-flex; 
+  justify-content: space-evenly;
+}
+
+#lemonade-img{
+    border-radius: 10px;
+    width: 30%;
+    height: 200px;
+    margin-top: 30px;
+}
+
+#smaller{
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 700;
+    color: #1a3975;
 }
