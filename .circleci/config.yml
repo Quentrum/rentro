@@ -7,6 +7,9 @@ jobs:
       - image: circleci/node:9.4.0
     steps:
       - checkout
+      - run:
+          name: Checksum
+          command: shasum ~/workspace/public > checksum.tmp
       - restore_cache:
           keys:
             - npm-{{ .Branch }}-{{ checksum "package-lock.json" }}
@@ -29,9 +32,6 @@ jobs:
       - image: circleci/node:9.4.0
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - npm-{{ .Branch }}-{{ checksum "package-lock.json" }}
       - run:
           name: Install Dependency
           command: npm install
