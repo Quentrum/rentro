@@ -23,7 +23,6 @@ jobs:
           key: npm-{{ .Branch }}-{{ checksum "checksum.tmp" }}
           paths:
             - ~/workspace/node_modules
-            - ~/workspace/dist
           force: yes
 
   deploy:
