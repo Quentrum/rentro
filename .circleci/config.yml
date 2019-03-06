@@ -7,9 +7,6 @@ jobs:
       - image: circleci/node:9.4.0
     steps:
       - checkout
-      - run:
-          name: Checksum
-          command: shasum ~/workspace/public > checksum.tmp
       - restore_cache:
           keys:
             - npm-{{ .Branch }}-{{ checksum "package-lock.json" }}
