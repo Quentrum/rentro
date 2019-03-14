@@ -10,6 +10,7 @@
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
@@ -23,7 +24,7 @@
         <div class='container-fluid'>
             <div class='header-container'>
                 <div class='logo' data-aos="fade-right" data-aos-duration="300">
-                    <a class='navbar-brand' href='/' style = 'color: #55efc4; font-size: 45px; letter-spacing: 1.5px; position: absolute; left: 30px; top: 30px; z-index: 5;
+                    <a class='navbar-brand' href='index.html' style = 'color: #55efc4; font-size: 45px; letter-spacing: 1.5px; position: absolute; left: 30px; top: 30px; z-index: 5;
                     '> <i class='fas fa-fire-alt'></i> Rentro</a>
                 </div>
                 <div class='upper-navigation'>
@@ -34,7 +35,7 @@
                         <li class='upper-nav-li rounded' data-aos="fade-left" data-aos-duration="1100" > <a class='header-links'> Sign Up </a> </li>
                     </ul>
                 </div>
-                <div class = 'hero-header'> 
+                <div class = 'hero-header force-center'> 
                     <div class='box'>
                         <div class='wave -one'></div>
                         <div class='wave -two'></div>
@@ -44,10 +45,10 @@
                         <div class = 'hero-header-text'>
                             <h1 id = 'hero-h1' data-aos="fade-up" data-aos-duration="500"><span>Make some</span></h1>
                             <h1 id = 'hero-h1' data-aos="fade-up" data-aos-duration="750"><span>or</span></h1>
-                            <h1 id = 'hero-h1' data-aos="fade-up" data-aos-duration="1000"><span>Save some</span></h1>
+                            <h1 id = 'hero-h1' data-aos="fade-up" data-aos-duration="1000" data-aos-offset="-50"><span>Save some</span></h1>
                         </div>
                         <div class = 'hero-header-form'>
-                            <h2 id = 'what' data-aos="zoom-in-up" data-aos-duration="300"> Looking for something great at a low price?</h2>
+                            <h2 class = 'force-center' id = 'what' data-aos="zoom-in-up" data-aos-duration="300"> Looking for something great at a low price?</h2>
                             <form id = 'hero-form'>
                                 <label class = 'hero-form-label' data-aos="zoom-in-up" data-aos-duration="500" data-aos-offset="-50"> What is it? </label>
                                 <input class = 'hero-form-input' data-aos="zoom-in-up" data-aos-duration="700" data-aos-offset="-50" type = 'text' placeholder='Start searching here...'> 
@@ -62,7 +63,7 @@
                                     <option value = '7'> A Semester </option>
                                     <option value = '8'> A Full Year </option>
                                 </select>
-                                <input type = 'button' id = 'hero-form-button' value = 'Search' data-aos="flip-up" data-aos-duration="1500"> 
+                                <input type = 'button' class = 'force-center' id = 'hero-form-button' value = 'Search' data-aos="flip-up" data-aos-duration="1500"> 
                             </form>
                         </div>
                     </div> <!--END OF 'hero'-->
@@ -74,16 +75,26 @@
                         <source src="img/background-video.mp4" type="video/mp4">
                     </video>
                 </div>
-                <h1 class = 'display-1' data-aos="" data-aos-duration="500"> Newest Items </h1>
+                <h1 class = 'display-1s' data-aos="" data-aos-duration="500"> Newest Items </h1>
                 <span class = 'location-text'>
                     <p class = 'display-p' data-aos="" data-aos-duration="500"> Will soon be showing you the latest deals from your area:</p>
-                    <div id="address" data-aos="" data-aos-duration="500"></div>
+                    <div class = 'force-center' id="address" data-aos="" data-aos-duration="500"></div>
                 </span>
                 <div class = 'middle-content'> 
                     <!--PROTOTYPE FOR THE ITEM BOXES --> 
                     <div class = 'main-rentro-ad'>
                         <h2 id='main-ad-h2'><span>Welcome to Rentro</span></h2>
-                        <h2 id='main-ad-p'><span>A platform from a UCSB based startup focused on helping college students survive the large financial toll of an education.</span></h2>
+                        <h2 id='main-ad-p'><span>The one and only online marketplace focused on college students, by college students. </span></h2>
+                        
+                        <div class = 'main-ad-slideshow'>
+                             <div class = 'main-ad-slideshow-1'>
+                                 <div class = 'main-ad-slideshow-icon'><i class="fas fa-chalkboard-teacher"></i></div>
+                                 <h1 class = 'main-ad-slideshow-h1'>Tired of spending money on expensive school supplies like textbooks or lab supplies that you'll only use for at most a year?</h1>
+                                 <p class = 'main-ad-slidwshow-p'></p>
+                             </div>
+                        </div>
+
+
                     </div>
 
                     <div id="firebaseui-auth-container"> 
@@ -91,7 +102,6 @@
                         <h2 id="pleasesign"><span>Even if the site isn't up yet, you can still create an account! We'll send you an email once we launch.</span></h2>
                     </div>
                 </div> <!--END OF MIDDLE CONTENT -->
-
             </div> <!--END OF MAIN BODY --> 
             <div class = 'footer navFooter'>
                 <ul class = 'navFooter-ul'> 
