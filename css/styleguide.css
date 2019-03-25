@@ -1,0 +1,47 @@
+/**COLOR SCHEME
+* blue: #2083bf
+* second blue: #1a5379
+* background: (cloud white) #ecf0f1
+* green color: #55efc4
+**/
+
+
+/*STANDARD USAGE CLASSES 
+* Force Center, for using transform to align elements 
+* Class Base
+* .force-center{ 
+*   margin-left: 50%; 
+*   transform: translateX(-50%); 
+*  } 
+*
+* Cushion LR, for adding space (cushion) on the left and right of element 
+*  .cushion-lr{
+*    margin: 0px 10%; 
+*  } 
+*  
+* Shadow: Adding a standard shadow around elements 
+* .shadow{
+*    transition: box-shadow 0.7s; 
+*  }
+*
+* Shadow Grow: Have small transition on hover: 
+* .shadow:hover{
+*   box-shadow: 0.1px 0.1px 50px #BBB; 
+*  } 
+*
+*  UL Clear 
+*  .ul-clear{
+*   list-style-type: none; 
+*   margin-inline-start: 0em; 
+*  } 
+*
+* FOR TEXTS: 
+* 
+* .medium-text{
+*  font-size: 21px; 
+*  } 
+*
+* FOR BOXES: 
+* .tri-box (container class) 
+* .tri-box1, 2, and 3 (each individual box) 
+*/
