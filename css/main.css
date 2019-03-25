@@ -24,44 +24,6 @@ html,body{
   padding: 0;
   }
 
-/*STANDARD USAGE CLASSES 
-* Force Center, for using transform to align elements 
-* Class Base
-* .force-center{ 
-*   margin-left: 50%; 
-*   transform: translateX(-50%); 
-*  } 
-*
-* Cushion LR, for adding space (cushion) on the left and right of element 
-*  .cushion-lr{
-*    margin: 0px 10%; 
-*  } 
-*  
-* Shadow: Adding a standard shadow around elements 
-* .shadow{
-*    transition: box-shadow 0.7s; 
-*  }
-*
-* Shadow Grow: Have small transition on hover: 
-* .shadow:hover{
-*   box-shadow: 0.1px 0.1px 50px #BBB; 
-*  } 
-*
-*  UL Clear 
-*  .ul-clear{
-*   list-style-type: none; 
-*   margin-inline-start: 0em; 
-*  } 
-*
-* FOR TEXTS: 
-* 
-* .medium-text{
-*  font-size: 21px; 
-*  } 
-*
-* 
-*/
-
 .container-fluid{
   padding-left: 0px; 
   padding-right: 0px; 
@@ -81,6 +43,33 @@ html,body{
  .medium-text{
    font-size: 21px; 
  }
+
+.tri-box{
+  padding: 0px 10px; 
+  display: flex;
+  justify-content: space-evenly; 
+  /** REMOVE AFTER **/
+  border: 1px solid red; 
+}
+
+.tri-box1, .tri-box2, .tri-box3{
+  width: 30%; 
+  margin: 10px 0px; 
+  /** REMOVE AFTER **/ 
+  border: 1px solid black; 
+  height: 400px; 
+}
+
+@media only screen and (max-width: 1000px) {
+  .tri-box {
+    flex-wrap: wrap;
+    flex-direction: column; 
+  }
+  .tri-box1, .tri-box2, .tri-box3{
+    width: 100%;
+  }
+}
+
 
 
 
@@ -460,17 +449,6 @@ a:visited, a:focus{
 
 }
 
-.main-ad-slideshow-icon{
-
-}
-
-.main-ad-slideshow-h1{
-
-}
-
-.main-ad-slideshow-p{
-
-}
 
 
 /** MEDIA QUERIES **/ 
